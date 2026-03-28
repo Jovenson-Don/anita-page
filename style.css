@@ -760,7 +760,8 @@ cite {
   .hero-badge { right: 10%; bottom: 16px; }
 
   .about-grid { grid-template-columns: 1fr; }
-  .services-grid { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card--kit { grid-column: 1; }
   .portfolio-grid { grid-template-columns: 1fr 1fr; }
   .whyme-inner { grid-template-columns: 1fr; gap: 48px; }
   .contact-grid { grid-template-columns: 1fr; }

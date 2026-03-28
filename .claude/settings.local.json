@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.tranugc.com)"
+      "WebFetch(domain:www.tranugc.com)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
