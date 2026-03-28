@@ -245,7 +245,7 @@ img { max-width: 100%; display: block; }
 
 .hero-headline {
   font-family: var(--font-head);
-  font-size: clamp(3.2rem, 7vw, 6.5rem);
+  font-size: clamp(2.6rem, 5.2vw, 5rem);
   line-height: 1.05;
   font-weight: 700;
   margin-bottom: 24px;
@@ -273,7 +273,7 @@ img { max-width: 100%; display: block; }
 
 .hero-image-placeholder {
   width: 100%;
-  max-width: 420px;
+  max-width: 520px;
   aspect-ratio: 3/4;
   background: linear-gradient(135deg, var(--blush) 0%, var(--accent2) 100%);
   border-radius: 100px 100px 80px 80px;
@@ -377,9 +377,37 @@ img { max-width: 100%; display: block; }
 }
 .stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 
-.stat-icon { font-size: 1.6rem; }
-.stat-label { font-weight: 700; font-size: 1rem; color: var(--dark); }
+.stat-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+}
+.stat-list li {
+  font-size: 0.9rem;
+  color: var(--dark);
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.stat-bullet {
+  font-size: 1rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.stat-label { font-weight: 700; font-size: 1rem; color: var(--dark); display: inline; }
 .stat-desc { font-size: 0.9rem; color: var(--mid); line-height: 1.5; }
+.stat-link { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; transition: opacity 0.2s; }
+.stat-link:hover { opacity: 0.7; }
 
 /* ============================
    SERVICES
@@ -393,17 +421,54 @@ img { max-width: 100%; display: block; }
 }
 
 .service-card {
-  background: var(--white);
+  background: var(--cream);
   border-radius: var(--radius);
-  padding: 36px 28px;
-  border: 1px solid rgba(200,169,126,0.15);
-  transition: transform 0.25s, box-shadow 0.25s;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid rgba(200,169,126,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 
-.service-icon { font-size: 2rem; margin-bottom: 16px; }
+.service-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.service-icon { font-size: 1.4rem; flex-shrink: 0; }
 .service-card h3 { font-family: var(--font-head); font-size: 1.2rem; margin-bottom: 12px; }
 .service-card p { color: var(--mid); font-size: 0.95rem; line-height: 1.6; }
+
+.service-card--kit {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card--kit .btn {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  padding: 16px 36px;
+}
+.service-card--kit .btn:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.kit-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  transition: opacity 0.2s;
+}
+.kit-link:hover { opacity: 0.7; }
 
 /* ============================
    PORTFOLIO
