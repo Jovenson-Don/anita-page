@@ -32,6 +32,9 @@ filterBtns.forEach(btn => {
         card.classList.remove('hidden');
       } else {
         card.classList.add('hidden');
+        // Pause any video that gets filtered out
+        const vid = card.querySelector('video');
+        if (vid) vid.pause();
       }
     });
   });
@@ -42,19 +45,51 @@ filterBtns.forEach(btn => {
 // ============================
 const form = document.getElementById('contactForm');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = form.querySelector('button[type="submit"]');
-  btn.textContent = 'Message Sent! ✅';
-  btn.style.background = '#2d4a3e';
-  btn.disabled = true;
+  const idleLabel = 'Send My Message ✨';
 
-  setTimeout(() => {
-    btn.textContent = 'Send My Message ✨';
-    btn.style.background = '';
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  btn.style.background = '';
+
+  const reset = (label, bg, delay) => {
+    btn.textContent = label;
+    btn.style.background = bg;
+    setTimeout(() => {
+      btn.textContent = idleLabel;
+      btn.style.background = '';
+      btn.disabled = false;
+    }, delay);
+  };
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+
+    if (res.ok) {
+      form.reset();
+      form.hidden = true;
+      const thanks = document.getElementById('formThanks');
+      if (thanks) thanks.hidden = false;
+    } else {
+      const data = await res.json().catch(() => null);
+      const msg = data && data.errors
+        ? data.errors.map(err => err.message).join(', ')
+        : 'Submission failed';
+      console.error('Formspree error:', msg);
+      reset('Something went wrong — try again', '#a33', 4000);
+      btn.disabled = false;
+    }
+  } catch (err) {
+    console.error('Network error:', err);
+    reset('Network error — try again', '#a33', 4000);
     btn.disabled = false;
-    form.reset();
-  }, 4000);
+  }
 });
 
 // ============================
@@ -78,6 +113,18 @@ animateEls.forEach((el, i) => {
   el.style.transform = 'translateY(24px)';
   el.style.transition = `opacity 0.5s ease ${i * 0.07}s, transform 0.5s ease ${i * 0.07}s`;
   observer.observe(el);
+});
+
+// ============================
+// PORTFOLIO VIDEOS — one at a time
+// ============================
+const portfolioVideos = document.querySelectorAll('.port-media');
+portfolioVideos.forEach(video => {
+  video.addEventListener('play', () => {
+    portfolioVideos.forEach(other => {
+      if (other !== video) other.pause();
+    });
+  });
 });
 
 // ============================

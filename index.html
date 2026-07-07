@@ -3,10 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anita Belinda Bien-Aime | UGC Creator</title>
+  <title>Anita B | RoyalCollectives — UGC Creator & Brand Partner</title>
+  <meta name="description" content="Anita Belinda Bien-Aime is a UGC creator producing raw, authentic short-form video and photo content for beauty, lifestyle, food, and wellness brands. Open for collabs." />
+  <meta name="theme-color" content="#1a1a1a" />
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Anita B | RoyalCollectives — UGC Creator & Brand Partner" />
+  <meta property="og:description" content="Raw, authentic UGC content that converts — for brands that want to feel real, not staged." />
+  <meta property="og:image" content="public/images/Most Beautiful Seester_-35.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Emoji favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -35,28 +48,34 @@
 
   <!-- ========== BANNER ========== -->
   <div class="banner-wrap">
-    <span class="banner-text">UGC Creator ★ Storyteller ★ Content Creator ★ Brand Partner ★ Authentic Voice</span>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>UGC Creator&nbsp; ★ &nbsp;Storyteller&nbsp; ★ &nbsp;Content Creator&nbsp; ★ &nbsp;Brand Partner&nbsp; ★ &nbsp;Authentic Voice&nbsp; ★ &nbsp;</span>
+        <span aria-hidden="true">UGC Creator&nbsp; ★ &nbsp;Storyteller&nbsp; ★ &nbsp;Content Creator&nbsp; ★ &nbsp;Brand Partner&nbsp; ★ &nbsp;Authentic Voice&nbsp; ★ &nbsp;</span>
+      </div>
+    </div>
   </div>
 
   <!-- ========== HERO ========== -->
   <section class="hero" id="hero">
     <div class="hero-text">
-      <p class="hero-eyebrow"></p>
-      <h1 class="hero-headline">
+      <span class="hero-eyebrow reveal-load">✦ &nbsp;UGC Creator &amp; Brand Partner</span>
+      <h1 class="hero-headline reveal-load">
         <span class="hero-not"><b><i><u>Not</u></i></b></span> one of your <br>lil' friends,<br />
         <em>but I can be.</em>
       </h1>
-      <p class="hero-sub">
+      <p class="hero-sub reveal-load">
         Raw and honest content delivered with love — like from your mom.
       </p>
-      <div class="hero-btns">
+      <div class="hero-btns reveal-load">
         <a href="#portfolio" class="btn btn-dark">See My Work</a>
         <a href="#contact" class="btn btn-outline">Get In Touch</a>
       </div>
     </div>
-    <div class="hero-image-wrap">
+    <div class="hero-image-wrap reveal-load">
       <div class="hero-image-placeholder">
-        <img src="public/images/Most Beautiful Seester_-35.jpg" alt="anita full body">
+        <img src="public/images/Most Beautiful Seester_-35.jpg" alt="Anita, UGC creator, seated portrait" />
+      </div>
       <div class="hero-badge">
         <span class="badge-emoji">✨</span>
         <span>Open for collabs</span>
@@ -151,74 +170,95 @@
       <div class="portfolio-filters">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="beauty">Beauty</button>
+        <button class="filter-btn" data-filter="personalcare">Personal Care</button>
         <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
-        <button class="filter-btn" data-filter="food">Food</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
       </div>
       <div class="portfolio-grid">
-        <div class="portfolio-card" data-category="beauty">
-          <div class="port-thumb beauty">
-            <span class="port-play">▶</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">Beauty</span>
-            <h4>Skincare Routine Unboxing</h4>
-            <p>Talk-to-camera style review with authentic reaction hooks</p>
-          </div>
+        <!-- Beauty -->
+        <div class="portfolio-card port-video" data-category="beauty">
+          <video class="port-media" src="public/videos/beauty.MP4" preload="metadata" playsinline controls muted></video>
         </div>
-        <div class="portfolio-card" data-category="lifestyle">
-          <div class="port-thumb lifestyle">
-            <span class="port-play">▶</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">Lifestyle</span>
-            <h4>Morning Routine Feature</h4>
-            <p>Day-in-the-life vlog format integrating the product naturally</p>
-          </div>
+        <div class="portfolio-card port-video" data-category="beauty">
+          <video class="port-media" src="public/videos/beauty2.MP4" preload="metadata" playsinline controls muted></video>
         </div>
-        <div class="portfolio-card" data-category="food">
-          <div class="port-thumb food">
-            <span class="port-play">▶</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">Food & Bev</span>
-            <h4>First Taste Reaction</h4>
-            <p>POV tasting video with close-up product shots and honest review</p>
-          </div>
+        <div class="portfolio-card port-video" data-category="beauty">
+          <video class="port-media" src="public/videos/lipgloss.MP4" preload="metadata" playsinline controls muted></video>
         </div>
-        <div class="portfolio-card" data-category="beauty">
-          <div class="port-thumb beauty2">
-            <span class="port-play">▶</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">Beauty</span>
-            <h4>Before & After Tutorial</h4>
-            <p>Transformation video using greenscreen + direct camera technique</p>
-          </div>
+        <!-- Personal Care -->
+        <div class="portfolio-card port-video" data-category="personalcare">
+          <video class="port-media" src="public/videos/baskandlather.MP4" preload="metadata" playsinline controls muted></video>
         </div>
-        <div class="portfolio-card" data-category="lifestyle">
-          <div class="port-thumb lifestyle2">
-            <span class="port-play">▶</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">Lifestyle</span>
-            <h4>Home Must-Have Review</h4>
-            <p>Cozy aesthetic with natural lighting and b-roll product footage</p>
-          </div>
+        <div class="portfolio-card port-video" data-category="personalcare">
+          <video class="port-media" src="public/videos/baskandlather2.MP4" preload="metadata" playsinline controls muted></video>
         </div>
-        <div class="portfolio-card" data-category="food">
-          <div class="port-thumb food2">
-            <span class="port-play">▶</span>
-          </div>
-          <div class="port-info">
-            <span class="port-tag">Food & Bev</span>
-            <h4>Recipe Integration Video</h4>
-            <p>Cooking tutorial seamlessly featuring a sponsored ingredient</p>
-          </div>
+        <div class="portfolio-card port-video" data-category="personalcare">
+          <video class="port-media" src="public/videos/oshea.MP4" preload="metadata" playsinline controls muted></video>
+        </div>
+        <!-- Lifestyle -->
+        <div class="portfolio-card port-video" data-category="lifestyle">
+          <video class="port-media" src="public/videos/flatiron.MP4" preload="metadata" playsinline controls muted></video>
+        </div>
+        <div class="portfolio-card port-video" data-category="lifestyle">
+          <video class="port-media" src="public/videos/jeans.MP4" preload="metadata" playsinline controls muted></video>
+        </div>
+        <div class="portfolio-card port-video" data-category="lifestyle">
+          <video class="port-media" src="public/videos/camera.MP4" preload="metadata" playsinline controls muted></video>
+        </div>
+        <!-- Travel -->
+        <div class="portfolio-card port-video" data-category="travel">
+          <video class="port-media" src="public/videos/Travel.mp4" preload="metadata" playsinline controls muted></video>
         </div>
       </div>
-      <div class="portfolio-cta">
-        <p>Want to see videos specific to your niche?</p>
-        <a href="#contact" class="btn btn-dark">Request a Sample Deck</a>
+    </div>
+  </section>
+
+  <!-- ========== BRANDS ========== -->
+  <section class="brands section-pad" id="brands">
+    <div class="container">
+      <div class="section-header center">
+        <span class="section-tag">Brands</span>
+        <h2 class="section-heading">Brands I've worked with.</h2>
+      </div>
+      <div class="brands-grid">
+        <a class="brand" href="https://www.jlab.com" target="_blank" rel="noopener">
+          <img class="brand-logo" src="public/brands/jlab.png" alt="JLab logo" />
+          <span>JLab</span>
+        </a>
+        <a class="brand" href="https://www.hsialife.com" target="_blank" rel="noopener">
+          <img class="brand-logo" src="public/brands/hsia.png" alt="HSIA logo" />
+          <span>HSIA</span>
+        </a>
+        <a class="brand" href="https://www.baskandlather.com" target="_blank" rel="noopener">
+          <img class="brand-logo" src="public/brands/baskandlather.png" alt="Bask &amp; Lather logo" />
+          <span>Bask &amp; Lather</span>
+        </a>
+        <a class="brand brand--wordmark" href="https://saltair.com" target="_blank" rel="noopener">
+          <img class="brand-logo brand-logo--wide" src="public/brands/saltair.png" alt="Saltair logo" />
+        </a>
+        <a class="brand" href="https://eadem.co" target="_blank" rel="noopener">
+          <img class="brand-logo" src="public/brands/eadem.png" alt="Eadem logo" />
+          <span>Eadem</span>
+        </a>
+        <a class="brand brand--logo-only" href="https://umayfitness.com/" target="_blank" rel="noopener">
+          <img class="brand-logo brand-logo--lg" src="public/brands/umay.png" alt="Umay Fitness logo" />
+        </a>
+        <a class="brand" href="https://crownedskin.com" target="_blank" rel="noopener">
+          <img class="brand-logo" src="public/brands/crownedskin.png" alt="Crowned Skin logo" />
+          <span>Crowned Skin</span>
+        </a>
+        <a class="brand" href="https://www.lysbeauty.com" target="_blank" rel="noopener">
+          <img class="brand-logo" src="public/brands/lys.png" alt="Lys Beauty logo" />
+          <span>Lys</span>
+        </a>
+        <a class="brand" href="https://www.fhiheat.com" target="_blank" rel="noopener">
+          <img class="brand-logo" src="public/brands/fhiheat.png" alt="FHI Heat logo" />
+          <span>FHI Heat</span>
+        </a>
+        <a class="brand" href="https://www.mykitsch.com" target="_blank" rel="noopener">
+          <img class="brand-logo" src="public/brands/kitsch.png" alt="Kitsch logo" />
+          <span>Kitsch</span>
+        </a>
       </div>
     </div>
   </section>
@@ -231,13 +271,6 @@
           <span class="section-tag light">Why Work With Me</span>
           <h2 class="section-heading light">Content that converts<br/><em>starts with authenticity</em></h2>
           <ul class="whyme-list">
-            <li>
-              <span class="check">✓</span>
-              <div>
-                <strong>No follower count required</strong>
-                <p>UGC is about quality content, not audience size. You get the content — your brand runs it.</p>
-              </div>
-            </li>
             <li>
               <span class="check">✓</span>
               <div>
@@ -255,15 +288,15 @@
             <li>
               <span class="check">✓</span>
               <div>
-                <strong>Full usage rights included</strong>
-                <p>Use the content across all platforms and ad campaigns — no extra licensing fees.</p>
+                <strong>Flexible usage rights</strong>
+                <p>Licensing options available for platforms and ad campaigns — tailored to how your brand plans to use the content.</p>
               </div>
             </li>
           </ul>
         </div>
         <div class="whyme-quote">
           <blockquote>
-            "Consumers trust real people more than polished ads. UGC bridges that gap — and I'm here to help your brand cross it."
+            "Real people deserve real, authentic reviews. That's the trust polished ads can't buy — and it's exactly what I create for your brand."
           </blockquote>
           <cite>— Anita Belinda Bien-Aime</cite>
         </div>
@@ -276,41 +309,40 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-left">
-          <span class="section-tag">Let's Collaborate</span>
-          <h2 class="section-heading">Ready to create<br/>something real?</h2>
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-heading">Let's create real content that<br/>stops the scroll and converts.</h2>
           <p>I'd love to hear about your brand and what you're looking to create. Fill out the form or reach out directly — I respond within 24 hours.</p>
           <div class="contact-links">
-            <a href="mailto:hello@anitabienaime.com" class="contact-link">
+            <a href="mailto:aroyalcollectives@gmail.com" class="contact-link">
               <span class="contact-icon">✉️</span>
-              hello@anitabienaime.com
+              aroyalcollectives@gmail.com
             </a>
-            <a href="https://instagram.com" target="_blank" class="contact-link">
-              <span class="contact-icon">📸</span>
-              @anitabienaime
-            </a>
-            <a href="https://tiktok.com" target="_blank" class="contact-link">
-              <span class="contact-icon">🎵</span>
-              @anitabienaime
+            <a href="https://tiktok.com/@royaldon21" target="_blank" class="contact-link">
+              <span class="contact-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.05-2.82h-3.1v11.9a2.53 2.53 0 0 1-2.53 2.53 2.53 2.53 0 1 1 .69-4.96V9.3a5.68 5.68 0 0 0-.69-.04 5.65 5.65 0 1 0 5.65 5.65V9.01a7.35 7.35 0 0 0 4.28 1.37V7.28a4.28 4.28 0 0 1-3.15-1.46Z"/></svg></span>
+              @royaldon21
             </a>
           </div>
         </div>
         <div class="contact-right">
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjgqzeoy" method="POST">
+            <input type="hidden" name="_subject" value="New collab inquiry from RoyalCollectives site" />
+            <!-- Honeypot spam trap: bots fill this, humans don't see it -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true" />
             <div class="form-group">
               <label for="name">Your Name</label>
-              <input type="text" id="name" placeholder="Jane Smith" required />
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
             </div>
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" placeholder="jane@yourbrand.com" required />
+              <input type="email" id="email" name="email" placeholder="jane@yourbrand.com" required />
             </div>
             <div class="form-group">
               <label for="brand">Brand / Company</label>
-              <input type="text" id="brand" placeholder="Your Brand Name" />
+              <input type="text" id="brand" name="brand" placeholder="Your Brand Name" />
             </div>
             <div class="form-group">
               <label for="niche">Content Niche</label>
-              <select id="niche">
+              <select id="niche" name="niche">
                 <option value="">Select a niche...</option>
                 <option>Beauty & Skincare</option>
                 <option>Fashion & Style</option>
@@ -323,10 +355,15 @@
             </div>
             <div class="form-group">
               <label for="message">Tell me about your project</label>
-              <textarea id="message" rows="4" placeholder="What kind of content are you looking for? Any specific ideas or goals?" required></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="What kind of content are you looking for? Any specific ideas or goals?" required></textarea>
             </div>
             <button type="submit" class="btn btn-dark full-width">Send My Message ✨</button>
           </form>
+          <div class="form-thanks" id="formThanks" hidden>
+            <div class="form-thanks-check">✓</div>
+            <h3>Thank you!</h3>
+            <p>Your message is on its way — I'll get back to you within 24 hours. Talk soon! ✨</p>
+          </div>
         </div>
       </div>
     </div>
@@ -346,9 +383,8 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="footer-social">
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">📸</a>
-        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">🎵</a>
-        <a href="mailto:hello@anitabienaime.com" aria-label="Email">✉️</a>
+        <a href="https://tiktok.com/@royaldon21" target="_blank" aria-label="TikTok"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" style="vertical-align:middle"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.05-2.82h-3.1v11.9a2.53 2.53 0 0 1-2.53 2.53 2.53 2.53 0 1 1 .69-4.96V9.3a5.68 5.68 0 0 0-.69-.04 5.65 5.65 0 1 0 5.65 5.65V9.01a7.35 7.35 0 0 0 4.28 1.37V7.28a4.28 4.28 0 0 1-3.15-1.46Z"/></svg></a>
+        <a href="mailto:aroyalcollectives@gmail.com" aria-label="Email">✉️</a>
       </div>
     </div>
     <div class="footer-bottom">
